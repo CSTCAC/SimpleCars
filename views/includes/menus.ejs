@@ -1,0 +1,90 @@
+<div class="col mb-4">
+    <p>Swaps Remaining: <%= players.player1swapsremain %></p>
+    <p>Swaps Cards Remaining: <%= players.player1swapcardsremain %></p>
+    <div style="text-align: center">
+        <button class="btn btn-primary shadow" id="p1srb" hx-get="/selectCarPlayer1" hx-target="#p1car">
+            Get
+            Car
+        </button>
+        <button class="btn btn-primary shadow" id="p1scrb" hx-get="/swapPlayer1" hx-target="#p2car">Swap
+            Card
+        </button>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <p>Turns Left In Game:<%= players.turnsleft %></p>
+    <div style="text-align: center">
+        <button class="btn btn-primary shadow" hx-get="/nextturn" id="trb" hx-target="#rcar">Next Car
+        </button>
+    </div>
+</div>
+<div class="col mb-4">
+    <p>Swaps Remaining: <%= players.player2swapsremain %></p>
+    <p>Swaps Cards Remaining: <%= players.player2swapcardsremain %></p>
+    <div style="text-align: center">
+        <button class="btn btn-primary shadow" hx-get="/selectCarPlayer2" id="p2srb" hx-target="#p2car">
+            Get
+            Car
+        </button>
+        <button class="btn btn-primary shadow" id="p2scrb" hx-get="/swapPlayer2" hx-target="#p1car">Swap
+            Card
+        </button>
+    </div>
+</div>
+<script>
+    document.body.addEventListener('htmx:afterSettle', function (evt) {
+        let p1sr = <%= players.player1swapsremain %>;
+        let p1scr = <%= players.player1swapcardsremain %>;
+        let p2sr = <%= players.player2swapsremain %>;
+        let p2scr = <%= players.player2swapcardsremain %>;
+        let tr = <%= players.turnsleft %>
+        if (p1sr <= 0) {
+            document.getElementById('p1srb').setAttribute('disabled', 'disabled');
+        }
+        if (p1scr <= 0) {
+            document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
+        }
+        if (p2sr <= 0) {
+            document.getElementById('p2srb').setAttribute('disabled', 'disabled');
+        }
+        if (p2scr <= 0) {
+            document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
+        }
+        if (tr <= 0) {
+            document.getElementById('trb').setAttribute('disabled', 'disabled');
+            document.getElementById('p1srb').setAttribute('disabled', 'disabled');
+            document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
+            document.getElementById('p2srb').setAttribute('disabled', 'disabled');
+            document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
+        }
+    });
+
+    addEventListener('load', (event) => {
+        let p1sr = <%= players.player1swapsremain %>;
+        let p1scr = <%= players.player1swapcardsremain %>;
+        let p2sr = <%= players.player2swapsremain %>;
+        let p2scr = <%= players.player2swapcardsremain %>;
+        let tr = <%= players.turnsleft %>
+        if (p1sr <= 0) {
+            document.getElementById('p1srb').setAttribute('disabled', 'disabled');
+        }
+        if (p1scr <= 0) {
+            document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
+        }
+        if (p2sr <= 0) {
+            document.getElementById('p2srb').setAttribute('disabled', 'disabled');
+        }
+        if (p2scr <= 0) {
+            document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
+        }
+        if (tr <= 0) {
+            document.getElementById('trb').setAttribute('disabled', 'disabled');
+            document.getElementById('p1srb').setAttribute('disabled', 'disabled');
+            document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
+            document.getElementById('p2srb').setAttribute('disabled', 'disabled');
+            document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
+        }
+    });
+
+</script>

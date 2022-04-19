@@ -1,0 +1,43 @@
+<%- include _header -%>
+
+<header class="bg-primary-gradient pt-5"></header>
+<section>
+    <div class="container bg-primary-gradient py-5">
+        <div class="py-5 p-lg-5">
+            <div class="row row-cols-1 row-cols-md-3 text-center mx-auto" style="max-width: 1200px;">
+                <div class="col mb-4">
+                    <h3 class="fw-bold">Player 1 Car</h3>
+                </div>
+                <div class="col mb-4">
+                    <h3 class="fw-bold">Passing Car</h3>
+                </div>
+                <div class="col mb-4">
+                    <h3 class="fw-bold">Player 2 Car</h3>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mx-auto" style="max-width: 1200px;">
+                <div class="col mb-4" id="p1car">
+                    <%- include ./includes/p1car.ejs %>
+                </div>
+                <div class="col mb-4" id="rcar" hx-get="/nextturn" hx-trigger="nextturn from:body">
+                    <%- include ./includes/newcar.ejs %>
+                </div>
+                <div class="col mb-4" id="p2car">
+                    <%- include ./includes/p2car.ejs %>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mx-auto" style="max-width: 1200px;" id="menus" hx-get="/menu"
+                 hx-trigger="refresh from:body">
+                <%- include ./includes/menus.ejs %>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-1 text-center mx-auto" style="max-width: 1200px;">
+            <div class="col mb-4">
+                <a href="/restart">
+                    <button class="btn btn-primary shadow">Restart Game</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include _footer -%>
