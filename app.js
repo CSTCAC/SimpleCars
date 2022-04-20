@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 80;
 // Server configuration
 const db = sqlite.inmem
 
-playercars = [{
+let playercars = [{
     player1carid: 1,
     player2carid: 1,
     randcarid: 99,
