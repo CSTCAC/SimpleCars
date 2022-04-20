@@ -1,13 +1,13 @@
 {
-  "name": "SimpleCarGame",
+  "name": "SimpleCars",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "ejs": "~2.6.1",
-    "express": "~4.16.1",
+    "ejs": "~2.7.4",
+    "express": "~4.17.3",
     "sqlite3": "^5.0.2"
   }
 }
