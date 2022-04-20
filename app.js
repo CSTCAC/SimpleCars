@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 80;
 
 //-------------------- Configurations ----------------------
 // Server configuration
-const db = sqlite.inmem
+const db = sqlite.inmem;
 
 let playercars = [{
     player1carid: 1,
