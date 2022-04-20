@@ -1,8 +1,8 @@
 //-------------------- Declarations ----------------------
 const express = require("express");
 const path = require("path");
-const sqlite = require("./dbinit")
-const util = require("./util")
+const sqlite = require("./dbinit");
+const util = require("./util");
 const app = express();
 const PORT = process.env.PORT || 80;
 
@@ -18,10 +18,10 @@ let playercars = [{
     player2swapcardsremain: 1,
     player1swapsremain: 10,
     player2swapsremain: 10,
-    turnsleft: 20
+    turnsleft: 20,
 }];
 
-playercars[0].randcarid = util.getRand()
+playercars[0].randcarid = util.getRand();
 
 
 app.set("view engine", "ejs");
@@ -37,7 +37,6 @@ app.use(function (req, res, next) {
 app.listen(PORT, () => {
     console.log("Server started (http://localhost:80/) !");
 });
-
 
 //-------------------- Routing ----------------------
 // GET / -- this is the home page button
