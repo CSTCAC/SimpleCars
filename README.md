@@ -9,5 +9,11 @@ Hopefully this project if anything allows you to understand how to embed EJS wit
 - We can swap the other players car once for one that is less favourable, but we can only do this once.
 
 **Running**
-NOT TESTED ON ALL MACHINES
+May struggle running as SQLITE has some pre-gyp / mapbox error. Plan to fix this at some point
+
+- npm start
+
+**Credits**
+- Thanks to the person who generated the data set, not sure where I found it now
+- Thanks to the site that I blatantly scrape for the Gran Turismo 6 cars.  I want to replace these at some point but that's a long winded affair.
 
