@@ -1,9 +1,9 @@
 {
-  "name": "resttest",
+  "name": "SimpleCarGame",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "ejs": "~2.6.1",
