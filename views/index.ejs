@@ -1,4 +1,4 @@
-<%- include _header -%>
+<%- include ("_header") -%>
 
 <header class="bg-primary-gradient pt-5"></header>
 <section>
@@ -17,18 +17,18 @@
             </div>
             <div class="row row-cols-1 row-cols-md-3 mx-auto" style="max-width: 1200px;">
                 <div class="col mb-4" id="p1car">
-                    <%- include ./includes/p1car.ejs %>
+                    <%- include ("./includes/p1car.ejs") %>
                 </div>
                 <div class="col mb-4" id="rcar" hx-get="/nextturn" hx-trigger="nextturn from:body">
-                    <%- include ./includes/newcar.ejs %>
+                    <%- include ("./includes/newcar.ejs") %>
                 </div>
                 <div class="col mb-4" id="p2car">
-                    <%- include ./includes/p2car.ejs %>
+                    <%- include ("./includes/p2car.ejs") %>
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-3 mx-auto" style="max-width: 1200px;" id="menus" hx-get="/menu"
                  hx-trigger="refresh from:body">
-                <%- include ./includes/menus.ejs %>
+                <%- include ("./includes/menus.ejs") %>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-md-1 text-center mx-auto" style="max-width: 1200px;">
@@ -40,4 +40,4 @@
         </div>
     </div>
 </section>
-<%- include _footer -%>
+<%- include ("_footer") -%>
