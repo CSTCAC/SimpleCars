@@ -33,58 +33,58 @@
     </div>
 </div>
 <script>
-    document.body.addEventListener('htmx:afterSettle', function (evt) {
-        let p1sr = <%= players.player1swapsremain %>;
-        let p1scr = <%= players.player1swapcardsremain %>;
-        let p2sr = <%= players.player2swapsremain %>;
-        let p2scr = <%= players.player2swapcardsremain %>;
-        let tr = <%= players.turnsleft %>
-        if (p1sr <= 0) {
-            document.getElementById('p1srb').setAttribute('disabled', 'disabled');
-        }
-        if (p1scr <= 0) {
-            document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
-        }
-        if (p2sr <= 0) {
-            document.getElementById('p2srb').setAttribute('disabled', 'disabled');
-        }
-        if (p2scr <= 0) {
-            document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
-        }
-        if (tr <= 0) {
-            document.getElementById('trb').setAttribute('disabled', 'disabled');
-            document.getElementById('p1srb').setAttribute('disabled', 'disabled');
-            document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
-            document.getElementById('p2srb').setAttribute('disabled', 'disabled');
-            document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
-        }
-    });
+  document.body.addEventListener('htmx:afterSettle', function (evt) {
+    let p1sr = <%= players.player1swapsremain %>;
+    let p1scr = <%= players.player1swapcardsremain %>;
+    let p2sr = <%= players.player2swapsremain %>;
+    let p2scr = <%= players.player2swapcardsremain %>;
+    let tr = <%= players.turnsleft %>
+    if (p1sr <= 0) {
+      document.getElementById('p1srb').setAttribute('disabled', 'disabled');
+    }
+    if (p1scr <= 0) {
+      document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
+    }
+    if (p2sr <= 0) {
+      document.getElementById('p2srb').setAttribute('disabled', 'disabled');
+    }
+    if (p2scr <= 0) {
+      document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
+    }
+    if (tr <= 0) {
+      document.getElementById('trb').setAttribute('disabled', 'disabled');
+      document.getElementById('p1srb').setAttribute('disabled', 'disabled');
+      document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
+      document.getElementById('p2srb').setAttribute('disabled', 'disabled');
+      document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
+    }
+  });
 
-    addEventListener('load', (event) => {
-        let p1sr = <%= players.player1swapsremain %>;
-        let p1scr = <%= players.player1swapcardsremain %>;
-        let p2sr = <%= players.player2swapsremain %>;
-        let p2scr = <%= players.player2swapcardsremain %>;
-        let tr = <%= players.turnsleft %>
-        if (p1sr <= 0) {
-            document.getElementById('p1srb').setAttribute('disabled', 'disabled');
-        }
-        if (p1scr <= 0) {
-            document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
-        }
-        if (p2sr <= 0) {
-            document.getElementById('p2srb').setAttribute('disabled', 'disabled');
-        }
-        if (p2scr <= 0) {
-            document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
-        }
-        if (tr <= 0) {
-            document.getElementById('trb').setAttribute('disabled', 'disabled');
-            document.getElementById('p1srb').setAttribute('disabled', 'disabled');
-            document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
-            document.getElementById('p2srb').setAttribute('disabled', 'disabled');
-            document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
-        }
-    });
+  addEventListener('load', (event) => {
+    let p1sr = <%= players.player1swapsremain %>;
+    let p1scr = <%= players.player1swapcardsremain %>;
+    let p2sr = <%= players.player2swapsremain %>;
+    let p2scr = <%= players.player2swapcardsremain %>;
+    let tr = <%= players.turnsleft %>
+    if (p1sr <= 0) {
+      document.getElementById('p1srb').setAttribute('disabled', 'disabled');
+    }
+    if (p1scr <= 0) {
+      document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
+    }
+    if (p2sr <= 0) {
+      document.getElementById('p2srb').setAttribute('disabled', 'disabled');
+    }
+    if (p2scr <= 0) {
+      document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
+    }
+    if (tr <= 0) {
+      document.getElementById('trb').setAttribute('disabled', 'disabled');
+      document.getElementById('p1srb').setAttribute('disabled', 'disabled');
+      document.getElementById('p1scrb').setAttribute('disabled', 'disabled');
+      document.getElementById('p2srb').setAttribute('disabled', 'disabled');
+      document.getElementById('p2scrb').setAttribute('disabled', 'disabled');
+    }
+  });
 
 </script>

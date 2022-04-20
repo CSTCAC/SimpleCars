@@ -1293,12 +1293,12 @@ const sql_in_cars = `INSERT INTO cars (brand, model,carType,imgUrl,price,drive,h
 
 // Serialise the creation of the in memdb
 db.serialize(function () {
-    try {
-        db.run(sql_cr_cars);
-        db.run(sql_in_cars);
-    } catch (e) {
-        console.log(e);
-    }
+  try {
+    db.run(sql_cr_cars);
+    db.run(sql_in_cars);
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 exports.inmem = db;
