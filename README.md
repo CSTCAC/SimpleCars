@@ -10,8 +10,10 @@ Hopefully this project if anything allows you to understand how to embed EJS wit
 
 **Running**
 May struggle running as SQLITE has some pre-gyp / mapbox error. Plan to fix this at some point
-
 - npm start
+or 
+- Docker build
+- Docker run -p 80:80 as it runs inside the container on port 80
 
 **Credits**
 - Thanks to the person who generated the data set, not sure where I found it now
