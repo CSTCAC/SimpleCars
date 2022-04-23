@@ -1,7 +1,9 @@
-<div class="card">
-    <img id="carimg" src="<%= randcars.imgUrl %>" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Model: <%= randcars.model %></h5>
+<div class="card w-96 bg-base-100 shadow-2xl border-2 border-slate-600/25">
+    <figure>
+        <img id="carimg" style="width: 100%; height:180px" src="<%= randcars.imgUrl %>" class="card-img-top" alt="...">
+    </figure>
+    <div class="card-body items-left text-left">
+        <h5 class="card-title" style="height:50px">Model: <%= randcars.model %></h5>
         <p class="card-text">
         <li>Brand:<%= randcars.brand %></li>
         <li>Car Type:<%= randcars.carType %></li>

@@ -18,10 +18,8 @@ let playercars = [{
   player1swapsremain: 10,
   player2swapsremain: 10,
   turnsleft: 20,
-  randcarid: 99,
+  randcarid: util.getRand(),
 }];
-
-playercars[0].randcarid = util.getRand();
 
 
 app.set("view engine", "ejs");
@@ -101,7 +99,7 @@ app.get("/menu", (req, res) => {
 app.get("/restart", (req, res) => {
   playercars[0].player1carid = 1;
   playercars[0].player2carid = 1;
-  playercars[0].randcarid = 99;
+  playercars[0].randcarid = util.getRand();
   playercars[0].player1swapcardsremain = 1;
   playercars[0].player2swapcardsremain = 1;
   playercars[0].player1swapsremain = 10;

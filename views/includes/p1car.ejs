@@ -1,7 +1,8 @@
-<div class="card">
-    <img id="carimg" src="<%= p1cars.imgUrl %>" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Model: <%= p1cars.model %></h5>
+<div class="card w-96 bg-base-100 shadow-2xl border-2 border-slate-600/25		">
+    <figure><img id="carimg" style="width: 100%; height:180px" src="<%= p1cars.imgUrl %>" class="card-img-top"
+                 alt="..."></figure>
+    <div class="card-body items-left text-left">
+        <h5 class="card-title" style="height:50px">Model: <%= p1cars.model %></h5>
         <p class="card-text">
         <li>Brand:<%= p1cars.brand %></li>
         <li>Car Type:<%= p1cars.carType %></li>

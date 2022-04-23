@@ -1,4 +1,4 @@
-<div class="col mb-4">
+<div class="grid flex-grow h-128 place-items-center pt-16">
     <p>Swaps Remaining: <%= players.player1swapsremain %></p>
     <p>Swaps Cards Remaining: <%= players.player1swapcardsremain %></p>
     <div style="text-align: center">
@@ -12,14 +12,14 @@
     </div>
 </div>
 
-<div class="col mb-4">
+<div class="grid flex-grow h-128 place-items-center pt-16">
     <p>Turns Left In Game:<%= players.turnsleft %></p>
     <div style="text-align: center">
         <button class="btn btn-primary shadow" hx-get="/nextturn" id="trb" hx-target="#rcar">Next Car
         </button>
     </div>
 </div>
-<div class="col mb-4">
+<div class="grid flex-grow h-128 place-items-center pt-16">
     <p>Swaps Remaining: <%= players.player2swapsremain %></p>
     <p>Swaps Cards Remaining: <%= players.player2swapcardsremain %></p>
     <div style="text-align: center">
